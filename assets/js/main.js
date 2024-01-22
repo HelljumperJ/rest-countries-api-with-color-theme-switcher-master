@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     var searchInput = document.querySelector('input[type="text"]');
     var flagCards = document.querySelectorAll('.card');
@@ -9,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var selectedRegion = regionSelect.value.toLowerCase();
 
         flagCards.forEach(function (card) {
-            var flagRegion = card.querySelector('.text-gray-500').innerText.toLowerCase();
+            // Obtener id para elementos p que contienen información de la región
+            var flagRegion = card.querySelector('#region-value').innerText.toLowerCase().trim();
             if (selectedRegion === 'all' || flagRegion === selectedRegion) {
                 card.classList.remove('hidden');
             } else {
@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         flagCards.forEach(function (card) {
             var flagTitle = card.querySelector('.card-title').innerText.toLowerCase();
-            var flagRegion = card.querySelector('.text-gray-500').innerText.toLowerCase();
+            // Obtener id para elementos p que contienen información de la región
+            var flagRegion = card.querySelector('#region-value').innerText.toLowerCase().trim();
             if (flagTitle.includes(searchTerm) && (regionSelect.value === 'all' || flagRegion === regionSelect.value.toLowerCase())) {
                 card.classList.remove('hidden');
             } else {
