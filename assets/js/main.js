@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var flagCards = document.querySelectorAll('.card');
     var regionSelect = document.querySelector('select');
 
-    // Evento de cambio para el select
+//----------------------------SELECT---------------------------------------------
+
     regionSelect.addEventListener('change', function () {
         var selectedRegion = regionSelect.value.toLowerCase();
 
         flagCards.forEach(function (card) {
-            // Obtener id para elementos p que contienen información de la región
             var flagRegion = card.querySelector('#region-value').innerText.toLowerCase().trim();
             if (selectedRegion === 'all' || flagRegion === selectedRegion) {
                 card.classList.remove('hidden');
@@ -18,13 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Evento de entrada para el input de búsqueda
+//----------------------------INPUT---------------------------------------
+
     searchInput.addEventListener('input', function () {
         var searchTerm = searchInput.value.toLowerCase();
 
         flagCards.forEach(function (card) {
             var flagTitle = card.querySelector('.card-title').innerText.toLowerCase();
-            // Obtener id para elementos p que contienen información de la región
+
             var flagRegion = card.querySelector('#region-value').innerText.toLowerCase().trim();
             if (flagTitle.includes(searchTerm) && (regionSelect.value === 'all' || flagRegion === regionSelect.value.toLowerCase())) {
                 card.classList.remove('hidden');
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Evento de cambio para el modo oscuro
+//--------------------------------MODO OSCURO------------------------------------
     var darkModeCheckbox = document.querySelector('input[type="checkbox"]');
     var body = document.body;
     var navbar = document.querySelector('.navbar');
