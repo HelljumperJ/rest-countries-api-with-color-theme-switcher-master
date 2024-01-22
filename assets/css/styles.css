@@ -1572,12 +1572,28 @@ html {
   height: 1.5rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-36 {
+  height: 9rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
 
 .w-80 {
   width: 20rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .w-full {
