@@ -1252,12 +1252,6 @@ html {
   outline-offset: 2px;
 }
 
-.mockup-phone .display {
-  overflow: hidden;
-  border-radius: 40px;
-  margin-top: -25px;
-}
-
 .mockup-browser .mockup-browser-toolbar .input {
   position: relative;
   margin-left: auto;
@@ -1528,10 +1522,6 @@ html {
   margin-bottom: 0.75rem;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .order-1 {
   order: 1;
 }
@@ -1570,10 +1560,6 @@ html {
   margin-top: 3rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -1608,10 +1594,6 @@ html {
 
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .justify-between {
